@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dkabot.com/article-test.schema",
+  "title": "Article",
+  "description": "An article that can be rendered by an app",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "description": "The unique identifier for an article",
+      "type": "string",
+      "format": "uuid"
+    },
+    "title": {
+      "description": "The user-facing title of an article",
+      "type": "string",
+      "minLength": 1
+    },
+    "blocks": {
+      "description": "The individual components that make up an article",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/articleBlock"
+      }
+    }
+  },
+  "required": [
+    "uuid",
+    "title",
+    "blocks"
+  ],
+  "$defs": {
+    "articleBlock": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Renders as markdown-flavored text",
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "data"
+          ],
+          "maxProperties": 1
+        },
+        "heading": {
+          "description": "Renders as markdown-flavoredt text, in heading variant",
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "data"
+          ],
+          "maxProperties": 1
+        },
+        "image": {
+          "description": "Renders as an image",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "maxProperties": 1
+        },
+        "video": {
+          "description": "Renders as a video player",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "local",
+                "youtube"
+              ]
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "name"
+          ],
+          "maxProperties": 2
+        },
+        "list": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "bullet",
+                "decimal",
+                "none"
+              ]
+            },
+            "elements": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/articleBlock"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "elements"
+          ],
+          "maxProperties": 2
+        },
+        "horizontalRule": {
+          "description": "Renders as a horizontal rule",
+          "type": "object",
+          "maxProperties": 0
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": false
+    }
+  }
+}

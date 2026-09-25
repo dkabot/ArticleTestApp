@@ -1,0 +1,987 @@
+{
+  "uuid": "a07cc3c2-83d1-4e36-9293-45710cc92c57",
+  "title": "Setting up for Children",
+  "blocks": [
+    {
+      "heading": {
+        "data": "Setting up a Handheld for Children (or Adult Children)"
+      }
+    },
+    {
+      "image": {
+        "name": "starkos-thumb"
+      }
+    },
+    {
+      "text": {
+        "data": "**Last updated: 28DEC2025 (see [Changelog](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Changelog) for details)**"
+      }
+    },
+    {
+      "text": {
+        "data": "Let’s imagine you have a child you’d like to introduce to your favorite retro games — but maybe they can’t read yet, or navigating through a complex interface is overwhelming for them. Or maybe you have a friend (or parent!) who can barely change the input signal on their television, let alone understand the difference between EmulationStation and RetroArch. Going even further, maybe you want a SUPER simple interface for yourself that focuses on the games while curating the look and feel of the box art. In this guide I’m going to show you how to perfectly curate a retro handheld to transform it into a foolproof handheld console of their dreams."
+      }
+    },
+    {
+      "text": {
+        "data": "Before we get started, let’s clear the air — this is not an effortless project. It requires some work to get everything dialed in perfectly, and YOU are the one who is going to do that work. I’ve tried to make it as painless as possible with this guide, an accompanying video, and a pre-configured software image, but it’s still going to take a little work to dial everything in. The joy in this project comes from a job well done, and from easing the recipient’s gaming experience. So, is this process easy? Not really. But is it worth it? Yes."
+      }
+    },
+    {
+      "text": {
+        "data": "**Table of Contents**"
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "[Recommended devices](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Devices)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Recommended microSD cards](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Cards)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Why ArkOS?](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#ArkOS)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Installation](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Install)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Configuration](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Configure)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Beautification](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Beautify)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Clean everything up](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Clean)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Add a custom boot logo](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Boot)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Pre-made microSD card image (StarkOS)](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#StarkOS)"
+            }
+          },
+          {
+            "text": {
+              "data": ""
+            }
+          },
+          {
+            "text": {
+              "data": "[Changelog](https://retrogamecorps.com/2024/04/28/setting-up-a-handheld-for-children-or-adult-children/#Changelog)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "video": {
+        "type": "youtube",
+        "name": "BfauEyoadjM"
+      }
+    },
+    {
+      "heading": {
+        "data": "Recommended devices"
+      }
+    },
+    {
+      "text": {
+        "data": "There is no shortage of handheld devices on the market, in a variety of shapes, sizes, and prices. For this project, I am going to recommend devices that are currently supported by the ArkOS custom operating system, for reasons I’ll explain later. There is a good variety of handhelds supported by this OS, but in particular I think that the Anbernic RG353PS might be the best fit. It has a nostalgic SNES form factor, is relatively comfortable for a variety of hand sizes, and has button placement that make it perfect for our needs."
+      }
+    },
+    {
+      "text": {
+        "data": "**Devices supported by ArkOS:**"
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "Anbernic RG353V"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG353VS"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG353M"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG503"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG351P \\*"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG351M \\*"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG351V"
+            }
+          },
+          {
+            "text": {
+              "data": "Anbernic RG351MP"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "PowKiddy RGB10"
+            }
+          },
+          {
+            "text": {
+              "data": "PowKiddy RGB10S"
+            }
+          },
+          {
+            "text": {
+              "data": "PowKiddy RGB20"
+            }
+          },
+          {
+            "text": {
+              "data": "PowKiddy RGB30"
+            }
+          },
+          {
+            "text": {
+              "data": "PowKiddy RK2023"
+            }
+          },
+          {
+            "text": {
+              "data": "ODROID Go Advance (and RK2020)"
+            }
+          },
+          {
+            "text": {
+              "data": "Game Console R35S"
+            }
+          },
+          {
+            "text": {
+              "data": "GameForce Chi"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "Ironically, the Anbernic RG353PS is not officially supported by ArkOS, because the developer doesn’t own one of these devices. Thankfully, their software build for a similar device (RG353M) will work just fine. Just bear in mind that if you run into any problems, the developer doesn’t have any RG353PS-specific support."
+      }
+    },
+    {
+      "text": {
+        "data": "Note that there is another device similar to the RG353PS, called the RG353P. This one is almost identical other than that it can also dual-boot into Android. We’re not going to need that feature in this setup, but if there is a specific RG353P color you prefer, then the RG353P might be a good alternative; just bear in mind that it’s a little more expensive than the RG353PS."
+      }
+    },
+    {
+      "text": {
+        "data": "*\\* The RG351P and RG351M devices were dropped from official support in 2021, so while those builds will work with this setup, they will lack the Quick Mode option.*"
+      }
+    },
+    {
+      "heading": {
+        "data": "Recommended microSD cards"
+      }
+    },
+    {
+      "text": {
+        "data": "The majority of the devices you can use (especially those from Anbernic) will come with a dual microSD card setup. The idea is that you can use a smaller card for the operating system, and a second, larger card to store your games. The benefit here is that you can swap your second card between ArkOS-supported device, or if you need to re-flash the OS card you won’t have to mess with your games card."
+      }
+    },
+    {
+      "text": {
+        "data": "For this particular project, I recommend doing a single-card setup. The idea here is that because this device will be played by children, it reduces the risk of one of two cards being lost! Of course, if you are familiar with how to set up ArkOS, you can always use a dual-card setup too."
+      }
+    },
+    {
+      "text": {
+        "data": "The size of your card will depend on how many game you plan on loading onto the device. If you plan on just focusing on old cartridge-based systems, a 16GB card is plenty, since those file sizes are small. If you plan on adding CD-based systems (like Sega CD, PS1, Dreamcast, etc), then the file sizes will get larger. Because the price differences are relatively minor between them, getting 128GB card will provide you with lots of space for games without breaking the bank."
+      }
+    },
+    {
+      "text": {
+        "data": "Here is a list of cards I recommend, based on their durability and reliability."
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "16GB cards:"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Ultra](https://amzn.to/433zAAY)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "32GB cards:"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Ultra](https://amzn.to/4dbaq9L)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Samsung Pro Endurance](https://amzn.to/4d6Vidw)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "64GB cards:"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Ultra](https://amzn.to/3wdjIl5)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Samsung EVO Select](https://amzn.to/3Jz1ttt)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "128GB cards:"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Extreme](https://amzn.to/31X8lev)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Samsung EVO Select](https://amzn.to/3vcRRO4)"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Ultra](https://amzn.to/3kMM7DE)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "256GB cards:"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Extreme](https://amzn.to/3pAX0zS)"
+            }
+          },
+          {
+            "text": {
+              "data": "[Samsung EVO Select](https://amzn.to/43fkBDX)"
+            }
+          },
+          {
+            "text": {
+              "data": "[SanDisk Ultra](https://amzn.to/433WfNC)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "heading": {
+        "data": "Why ArkOS?"
+      }
+    },
+    {
+      "text": {
+        "data": "There are PLENTY of operating systems out there for retro handhelds, and many of them are very beginner-friendly. For example, you could load up a Miyoo Mini Plus with OnionOS or MinUI and that will likely work well for most people ([check out my guide here](https://retrogamecorps.com/2022/05/15/miyoo-mini-v2-guide/) if you’d like to go that route). Similarly, [GarlicOS on the Anbernic RG35XX](https://retrogamecorps.com/2023/01/03/anbernic-rg35xx-starter-guide/) is a great combo, as is [Knulli](https://knulli.org/) on the RG35XX Plus and H handhelds. Other OS options, like [ROCKNIX](https://github.com/ROCKNIX/distribution) or [AmberELEC](https://amberelec.org/), have EmulationStation frontends and settings menus, giving you a unified experience for many handhelds."
+      }
+    },
+    {
+      "text": {
+        "data": "But we’re going to use ArkOS for a few reasons:"
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "It has an EmulationStation frontend and is pre-installed with a specific theme called Switch, and when configured properly, it can give you a game-browsing experience that puts the games first and foremost, and is easily curated to your needs. This will make the experience very simple for those who cannot read."
+            }
+          },
+          {
+            "text": {
+              "data": "It has a feature known as “Quick Mode” which will allow you to power down the device almost instantly, and resume the game when you power back on."
+            }
+          },
+          {
+            "text": {
+              "data": "This OS provides for a lot of freedom when configuring RetroArch, giving you the ability to easily customize hotkeys and more to your liking."
+            }
+          },
+          {
+            "text": {
+              "data": "If you’d like, you can create a custom boot logo for your device to give it a more personalized look and feel for whomever you are gifting the device to."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "image": {
+        "name": "starkos.001"
+      }
+    },
+    {
+      "heading": {
+        "data": "Installation"
+      }
+    },
+    {
+      "text": {
+        "data": "I have a full [ArkOS installation and setup guide on this website](https://retrogamecorps.com/2023/03/27/arkos-starter-guide/), but for this project we’re going to revisit the process again."
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "Head over to the [ArkOS wiki page](https://github.com/christianhaitian/arkos/wiki) and scroll down to the bottom of the page. There you will see a listing of devices and links via GDrive and Mega to download an SD card image. Find your corresponding device and download the file to your computer. The file will be in img.xz format."
+            }
+          },
+          {
+            "text": {
+              "data": "If you’d like, you can use a decompression tool like [7Zip](https://www.7-zip.org/) (Windows) or [The Unarchiver](https://theunarchiver.com/) (Mac) to extract the .xz file into .img format. It should be around 8GB in total size after extracting it. This step isn’t necessary but some have found that flashing the image when it is uncompressed can sometimes avoid errors."
+            }
+          },
+          {
+            "text": {
+              "data": "If you are not using a brand new microSD card, I recommend formatting the card using the [sdcard.org formatter tool](https://www.sdcard.org/downloads/formatter/) (available for both Windows and Mac). This is an extra step but I have found that it often saves me headaches later down the line."
+            }
+          },
+          {
+            "text": {
+              "data": "Using a flashing software tool like [Rufus](https://rufus.ie/en/) or [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/) (Windows) or [ApplePiBaker](https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/) (Mac) to flash the img file to a microSD card. [Balena Etcher](https://www.balena.io/etcher) also works for Windows/Mac but there have been reports of it not working well with ArkOS. "
+            }
+          },
+          {
+            "text": {
+              "data": "Once you have flashed the card, eject it from your computer and place the card in the SD1/TF1 slot on your device. Boot the device up, and it will resize your partitions. When it is done initializing the system, you will see the main ArkOS page."
+            }
+          },
+          {
+            "text": {
+              "data": "If you are going to use a two-card setup, insert a blank microSD card (if it is not a brand new card, you can format it first on your PC using the [sdcard.org formatter](https://www.sdcard.org/downloads/formatter/) just to be safe), then navigate to Options > Advanced > Switch to SD2 for ROMs. This will populate the cards with all the appropriate ROM folders. Note that after making this switch, you will need to have both cards in your device to boot with this setup."
+            }
+          },
+          {
+            "text": {
+              "data": "**Connect to WiFi:** In order to scrape boxart and update the system, you need to be connected to WiFi. While on the main ArkOS menu, navigate to Options > WiFi and follow the prompts to connect your device to your WiFi network. Some devices (like the RG351P, RG351MP, and RGB10) do not have WiFi chips, so you will need to use a [USB WiFi dongle](https://amzn.to/3lD30q5)."
+            }
+          },
+          {
+            "text": {
+              "data": "**Update ArkOS:** Navigate to Options > Update to update the OS to the latest version. You’ll need to be connected to the internet for this to work."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "Next, we’re going to add our game and BIOS files. I would recommend adding more games that you plan on putting in the final game list, so that you have some choice to swap around games as needed."
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "Turn off your device by pressing START and going to Quit > Shutdown System. Eject the SD1 card from your device (or SD2 if using a dual-card setup), and insert the card into your PC. You can now start adding your ROM and BIOS files to the EASYROMS partition on your card, and be sure to use the [ArkOS emulators page](https://github.com/christianhaitian/arkos/wiki/ArkOS-Emulators-and-Ports-information) to see the appropriate folder, file format, and BIOS files for each system. Once you are done, you can eject the card, re-insert it into your device, and start playing games."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "Note that if you are an advanced user, yes you can get in the weeds when adding games! You could load up your favorite ROM hacks, the standalone native Pico-8 console, or even some ports via PortMaster."
+      }
+    },
+    {
+      "image": {
+        "name": "starkos.002"
+      }
+    },
+    {
+      "heading": {
+        "data": "Configuration"
+      }
+    },
+    {
+      "text": {
+        "data": "Next, we need to tweak ArkOS so that it will be easier to use for the end user."
+      }
+    },
+    {
+      "text": {
+        "data": "**Turn on Quick Mode:** Go into Options > Advanced > Enable Quick Mode to set this up. This allows you to press the Function key + Power to quickly turn off ArkOS, and it’ll save your progress at the same time if you’re in the middle of a game. When you start the device back up, it will boot back to the game you were playing, or the main menu if you weren’t in a game. **Note that for devices without a dedicated Function (F) button, the hotkey is generally the R3 button; so you would click down on the right analog stick and tap Power at the same time.**"
+      }
+    },
+    {
+      "text": {
+        "data": "**Set all games to run via RetroArch:** Some systems, like N64, will run via a standalone emulator by default. We need them to run via RetroArch so that they will work properly with Quick Mode. Press the START button then select Emulator Settings, and go to Nintendo 64 and set the Emulator to RETROARCH. That’s it. Most of the others will be already preconfigured, other than some outliers like Sega Saturn. Pico-8 is the one exception, you can launch the native app and still use Quick Mode, no need for RetroArch."
+      }
+    },
+    {
+      "text": {
+        "data": "**RetroArch configurations:** Many RetroArch settings are configured out of the box, but there are a few that I like to do with a fresh ArkOS installation. To get started, navigate to the RetroArch section and choose to open “RETROARCH” (the 64-bit version). Note that you will also want to do the same adjustments with RETROARCH32 (the 32-bit version, mostly for PS1 emulation)."
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "**Configuration file:** this is the most important file, which will save your changes in RetroArch. Once you have made any of the changes below, be sure to go to Configuration File > Save Current Configuration."
+            }
+          },
+          {
+            "text": {
+              "data": "**Quick Exit:** To exit out of any game running via RetroArch in ArkOS, you need to press SELECT + START twice. Personally, I like to only press it one time. To set this up, go to Settings > Input > Confirm Quit and toggle it off."
+            }
+          },
+          {
+            "text": {
+              "data": "**Hotkeys:** Go into Settings > Input > Hotkeys to make any adjustments from the ArkOS defaults. Personally, I like to adjust the following (diagram above):"
+            }
+          },
+          {
+            "list": {
+              "type": "bullet",
+              "elements": [
+                {
+                  "text": {
+                    "data": "Fast Forward (Toggle): R2"
+                  }
+                },
+                {
+                  "text": {
+                    "data": "Show FPS (Toggle): Y button"
+                  }
+                },
+                {
+                  "text": {
+                    "data": "Reset Content: B button (should be mapped by default)"
+                  }
+                },
+                {
+                  "text": {
+                    "data": "Manual save state (SELECT + R1) and load state (SELECT + L1) are already configured in ArkOS."
+                  }
+                },
+                {
+                  "text": {
+                    "data": "*Note that some hotkeys may already be mapped by default, which could conflict with the hotkeys above. To unmap a button press the Y button while hovering over it in the menu.*"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "text": {
+              "data": "**Auto Save/Load:** Go into Settings > Saving > and toggle ON these two settings: Auto Save State and Load State Automatically. Now, when you close out of a game, it will save your spot, and then when you load the game, it’ll resume that same place."
+            }
+          },
+          {
+            "text": {
+              "data": "**Fewer notifications:** RetroArch will by default give you a bunch of notifications when you start up the game, which is great if you like data, but not great for kids. I recommend going into Settings > User Interface > On-Screen Notifications > Notification Visibility and toggle OFF the following options: "
+            }
+          },
+          {
+            "list": {
+              "type": "bullet",
+              "elements": [
+                {
+                  "text": {
+                    "data": "Display Framerate: OFF"
+                  }
+                },
+                {
+                  "text": {
+                    "data": "\"Load Content\" Startup Notification: OFF"
+                  }
+                },
+                {
+                  "text": {
+                    "data": "Save State Notification: OFF"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "**Once you have made your desired changes, be sure to save your configuration by going to Configuration File > Save Current Configurations.** If you mess up your RetroArch settings, you can go to the main ArkOS menu and go to Options > Advance > Restore Default RetroArch Settings."
+      }
+    },
+    {
+      "text": {
+        "data": "Another element you may want to tweak are **core options.** For example, you can adjust colorization for Game Boy, or remove sprite limits for NES. You can access these by opening a game and press SELECT + X to bring up the RetroArch Quick Menu, and scroll down until you find Core Options. You can also set up shaders for certain systems as well, which are explained in my [RetroArch guide](https://retrogamecorps.com/2022/02/28/retroarch-starter-guide/#Shaders)."
+      }
+    },
+    {
+      "heading": {
+        "data": "Beautification"
+      }
+    },
+    {
+      "text": {
+        "data": "Now that we have configured the settings how we want, we are going to add custom boxart, and then hide all of our work to give the end user a more seamless experience. Setting up the boxart is a two-step process, because we’re going to make art that is of uniform shape and size to enhance the navigation experience."
+      }
+    },
+    {
+      "text": {
+        "data": "**Scrape artwork:** We’re going to start by scraping boxart, not because we need it, but because it will create the right image file names for each of our games, as well as an XML file. To start, you will need a free account from [screenscraper.fr](https://screenscraper.fr/). Next, connect your device to WiFi, and then press the START button and navigate to SCRAPER. Here you can adjust the parameters (for example I prefer to have “Box2D” as my Image Source, then add your username/password from screenscraper. Next, choose “Scrape Now”, determine which systems you want to scrape art for, and then choose “Start”. It may take some time to scrape everything if you have a large collection. If you prefer to keep your device offline or if you have a device without WiFi capability (like the RG351MP), you can scrape the boxart using a Windows PC ([here is my guide](https://retrogamecorps.com/2021/04/02/quick-guide-skraper-for-retro-handheld-devices/))."
+      }
+    },
+    {
+      "text": {
+        "data": "**Replace the artwork with your own:** Now that we have the preliminary art added, shut the device down and eject the SD card, then put it into your computer. Now, go to [SteamGridDB](https://www.steamgriddb.com/) and find a good image for each game. What I prefer to do is search for the game, then look at the “Grid” images, and pick one that is 600×900 resolution (which is most of them). **One note is that the image should be in PNG file format (they usually are).** On my computer I’ll have one window open that is navigating the ROM SD card, so I can easily see what game(s) to search for, and then once I have the image I like, I save it directly into the SD card, overwriting the existing boxart (and using its original filename). This is probably the most mundane part of the project, and another reason why you don’t want to have a LARGE file library for your system. I also find this to be really fun, because I can choose boxart that I think will appeal to whomever I am gifting the device to."
+      }
+    },
+    {
+      "text": {
+        "data": "**Make a FAVORITES list:** Navigate through your game libraries, and choose which games you want to appear in the main games list. We’re going to manage this via the Favorites function. When you find a game you want to add to the main collection, hover over it and press the Y button, you should get a notification that it was added to your Favorites list."
+      }
+    },
+    {
+      "text": {
+        "data": "**Change and configure the system theme:** Press the START button and choose UI Settings > Theme > ES-Theme-Switch. Then in the UI settings, make the following changes:"
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "UI Mode: FULL"
+            }
+          },
+          {
+            "text": {
+              "data": "Transition style: SLIDE"
+            }
+          },
+          {
+            "text": {
+              "data": "Game launch transition: FADE"
+            }
+          },
+          {
+            "text": {
+              "data": "Start on System: FAVORITES"
+            }
+          },
+          {
+            "text": {
+              "data": "Visible Systems: ADJUST AS NEEDED"
+            }
+          },
+          {
+            "text": {
+              "data": "Boot on Gamelist: ON"
+            }
+          },
+          {
+            "text": {
+              "data": "Hide System View: OFF (for now)"
+            }
+          },
+          {
+            "text": {
+              "data": "Quick System Select: OFF"
+            }
+          },
+          {
+            "text": {
+              "data": "Carousel Transitions: ON"
+            }
+          },
+          {
+            "text": {
+              "data": "Show Clock: OFF"
+            }
+          },
+          {
+            "text": {
+              "data": "On-Screen Help: ON"
+            }
+          },
+          {
+            "text": {
+              "data": "Show Battery Status: ICON AND TEXT"
+            }
+          },
+          {
+            "text": {
+              "data": "Everything else: OFF"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "Now, go to UI Settings > Theme Configuration and make the following changes:"
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "Gamelist View Style: GRID"
+            }
+          },
+          {
+            "text": {
+              "data": "Default Grid Size: AUTOMATIC"
+            }
+          },
+          {
+            "text": {
+              "data": "Theme Color: DARK"
+            }
+          },
+          {
+            "text": {
+              "data": "System Icon Style: DEFAULT"
+            }
+          },
+          {
+            "text": {
+              "data": "Detailed Gamelist View Style: NO METADATA"
+            }
+          },
+          {
+            "text": {
+              "data": "Gridview Selection: DEFAULT"
+            }
+          },
+          {
+            "text": {
+              "data": "Show Top and Bottom Bar: YES"
+            }
+          },
+          {
+            "text": {
+              "data": "Force Uppercase: NO"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "Now, when you go back to the ArkOS interface, you should automatically be in the Favorites section. If the box art doesn’t seem to be of a uniform size, try restarting the device and checking again."
+      }
+    },
+    {
+      "heading": {
+        "data": "Clean everything up"
+      }
+    },
+    {
+      "text": {
+        "data": "Now that everything looks nice, let’s hide some of the more advanced configurations. It’s for their own good."
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "Disable WiFi: While on the main ArkOS menu, navigate to Options > WiFi and choose “Delete existing connections”. Once that is done, turn off the WiFi, and exit the menu."
+            }
+          },
+          {
+            "text": {
+              "data": "Press START and select UI Settings > Hide System View > ON. This will make it so that the only list the user sees is the Favorites menu."
+            }
+          },
+          {
+            "text": {
+              "data": "Back out to the main menu and verify that you are in the Favorites section, and that everything is working properly."
+            }
+          },
+          {
+            "text": {
+              "data": "Press START and select UI Settings > UI Mode > KID. You will get a warning, just confirm that you want to proceed. Now when you exit the menu and press START, nothing will happen, and the user is not able to remove any games from the favorites list either. They just need to know that in order to power the device down, they can press F + POWER."
+            }
+          },
+          {
+            "text": {
+              "data": "Note that while this makes the user interface pretty foolproof, it doesn’t prevent the user from accessing the RetroArch Quick Menu, by pressing SELECT + X at the same time while in a game. Hopefully they don’t do that."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "To reverse these settings, you can disable KID mode by typing in the Konami code on your device (Up, Up, Down, Down, Left, Right, Left, Right, B, A). It should work with the d-pad, but if it doesn’t, use the analog stick. From there, go to UI Settings > Hide System View > OFF, and you can now access the whole game library."
+      }
+    },
+    {
+      "text": {
+        "data": "One last note: this current setup still allows for access to the RetroArch Quick Menu while playing a game, if needed. I tossed and turned whether or not to remove that hotkey to further lock the device down, but I assumed that it might be rare that someone would press SELECT + X at the same time. If you’d like to remove the possibility (especially if you’re handing this device off to a child), you can disable the RA Quick Menu hotkey by going into RetroArch > Settings > Input > Hotkeys and then press the Y button on your device while hovering over the “Menu Toggle” option. Save your RetroArch configuration file and you are good to go. Then, if you ever need to get back into the system, once everything is fully set up, you could remove the EmulationStation kid mode (following the instructions in the blue box above), then boot into RetroArch directly from the ArkOS menu, then re-set the RA Quick Menu hotkey. It’s a bit of extra work but that would fully lock it down and still grant you access to it when needed."
+      }
+    },
+    {
+      "heading": {
+        "data": "Add a custom boot logo"
+      }
+    },
+    {
+      "text": {
+        "data": "If you would like, you can manually create your own boot logo for ArkOS. It is an advanced procedure, and requires you to have a GitHub account. [Here are the instructions](https://github.com/christianhaitian/rk3566_logo_generator)."
+      }
+    },
+    {
+      "heading": {
+        "data": "Pre-made microSD card image (StarkOS)"
+      }
+    },
+    {
+      "text": {
+        "data": "In addition to building this software image from scratch with the instructions above, I’ve also made a specific software image that you can download and flash to a microSD card. This will have the preconfigured settings ready to go, but you will need to add your own ROMs/BIOS files, and also add the boxart yourself. But it does have a couple nice perks, like a custom Retro Game Corps boot logo, and a special loading screen."
+      }
+    },
+    {
+      "text": {
+        "data": "This software image is the latest version of ArkOS as of making this guide (April 2024), but you can also update it yourself via the online updater after you’ve flashed it to a microSD card. It’s designed to be used with a 16GB card. This image was made with the ArkOS developer’s permission, although he wanted me to emphasize that the RG353P and RG353PS are not officially supported devices by ArkOS, so if you run into any issues, you’ll need to troubleshoot them yourself without his assistance. I’m calling this image “StarkOS” — Simple, Tailored ArkOS — to avoid confusion between the two."
+      }
+    },
+    {
+      "text": {
+        "data": "Note that this StarkOS firmware image is for the Anbernic RG353P, RG353PS, and RG353M devices only. If you want to use this setup with a different ArkOS-supported device, you’ll have to set it up manually since it will require a different SD card image."
+      }
+    },
+    {
+      "text": {
+        "data": "**Instructions:**"
+      }
+    },
+    {
+      "list": {
+        "type": "bullet",
+        "elements": [
+          {
+            "text": {
+              "data": "Download the StarkOS image and save it to your computer. You can find it via [Archive](https://archive.org/details/stark-os-rg-353-ps-v-1-20240424.img) or [Mega](https://mega.nz/file/vQlBXYID#MCRuKokutsXMlEKKwZ4nILwMo-_gkko8s1LPXxA6Ub8). Mega will be faster but because the file is over 5GB, it will prompt you to sign up for their Pro tier or wait a number of hours before finishing the download. Archive is more stable."
+            }
+          },
+          {
+            "text": {
+              "data": "If you’d like, you can use a decompression tool like [7Zip](https://www.7-zip.org/) (Windows) or [The Unarchiver](https://theunarchiver.com/) (Mac) to extract the .xz file into .img format. It should be around 16GB in total size after extracting it. This step isn’t necessary but some have found that flashing the image when it is uncompressed can sometimes avoid errors."
+            }
+          },
+          {
+            "text": {
+              "data": "If you are not using a brand new microSD card, I recommend formatting the card using the [sdcard.org formatter tool](https://www.sdcard.org/downloads/formatter/) (available for both Windows and Mac). This is an extra step but I have found that it often saves me headaches later down the line."
+            }
+          },
+          {
+            "text": {
+              "data": "Using a flashing software tool like [Rufus](https://rufus.ie/en/) or [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/) (Windows) or [ApplePiBaker](https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/) (Mac) to flash the img file to a microSD card. [Balena Etcher](https://www.balena.io/etcher) also works for Windows/Mac but there have been reports of it not working well with ArkOS."
+            }
+          },
+          {
+            "text": {
+              "data": "If you are using a card larger than 16GB, you can try to resize the EASYROMS partition using an app like [MiniTool Partition Wizard](https://www.partitionwizard.com/)."
+            }
+          },
+          {
+            "text": {
+              "data": "**Connect to WiFi:** In order to scrape boxart and update the system, you need to be connected to WiFi. While on the main ArkOS menu, navigate to Options > WiFi and follow the prompts to connect your device to your WiFi network. Some devices (like the RG351P, RG351MP, and RGB10) do not have WiFi chips, so you will need to use a [USB WiFi dongle](https://amzn.to/3lD30q5)."
+            }
+          },
+          {
+            "text": {
+              "data": "**Update ArkOS:** Navigate to Options > Update to update the OS to the latest version. You’ll need to be connected to the internet for this to work."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": {
+        "data": "From there, you will need to add your ROMs/BIOS files and artwork following the steps above. You won’t need to adjust hotkeys or RetroArch settings, since those are preconfigured. Same thing with the theme options. Once everything is added, follow the “Clean Everything Up” settings and you’ll be good to go."
+      }
+    },
+    {
+      "horizontalRule": {}
+    },
+    {
+      "heading": {
+        "data": "Changelog"
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "**28DEC2025**"
+            }
+          },
+          {
+            "text": {
+              "data": "– added note about unmapping hotkeys"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "**29APR2024**"
+            }
+          },
+          {
+            "text": {
+              "data": "– added [Archive.org link](https://archive.org/details/stark-os-rg-353-ps-v-1-20240424.img) for the StarkOS image"
+            }
+          },
+          {
+            "text": {
+              "data": "– added instructions on how to resize the StarkOS EASYROMS partition if using a card larger than 16GB"
+            }
+          },
+          {
+            "text": {
+              "data": "– fixed typos"
+            }
+          },
+          {
+            "text": {
+              "data": "– updated device list"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "list": {
+        "type": "none",
+        "elements": [
+          {
+            "text": {
+              "data": "**28APR2024**"
+            }
+          },
+          {
+            "text": {
+              "data": "– published guide"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
